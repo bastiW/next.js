@@ -71,7 +71,7 @@ Log into https://manage.sanity.io/ and choose the project you just created. Then
 
 ### Step 4. Set up environment variables
 
-Copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
+Inside the next.js project folder copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
 
 ```bash
 cp .env.local.example .env.local
@@ -97,11 +97,13 @@ SANITY_STUDIO_REVALIDATE_SECRET=...
 
 ### Step 5. Prepare the project for previewing
 
-5.1. Install the `@sanity/production-preview` plugin with `sanity install @sanity/production-preview`.
+5.1. Navigate to the sanity project folder.
 
-5.2. Create a file called `resolveProductionUrl.js` (we'll get back to that file in a bit).
+5.2. Install the `@sanity/production-preview` plugin with `sanity install @sanity/production-preview`.
 
-5.3. Open your studio's sanity.json, and add the following entry to the parts-array:
+5.3. Create a file called `resolveProductionUrl.js` (we'll get back to that file in a bit).
+
+5.4. Open your studio's sanity.json, and add the following entry to the parts-array:
 
 ```diff
 {
